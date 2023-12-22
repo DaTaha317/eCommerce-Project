@@ -130,3 +130,22 @@ body {
   right: 97%;
 }
 /* End Slider */
+
+/* Start Cart Cards */
+.card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hide {
+  display: none;
+}
+/* End Cart Cards */

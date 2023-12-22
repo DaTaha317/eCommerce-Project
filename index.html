@@ -131,37 +131,37 @@
         <div class="col-md-6 slider-container">
           <!-- Right Column  -->
           <img
-            src="resources/Slider/1.jpg"
+            src="resources/Books/Fantasy/1.jpg"
             alt="Harry Potter Collection"
             class="img-fluid mySlides"
           />
           <img
-            src="resources/Slider/2.jpg"
+            src="resources/Books/Fantasy/2.jpg"
             alt="Harry Potter Collection"
             class="img-fluid mySlides"
           />
           <img
-            src="resources/Slider/3.jpg"
+            src="resources/Books/Fantasy/3.jpg"
             alt="Harry Potter Collection"
             class="img-fluid mySlides"
           />
           <img
-            src="resources/Slider/4.jpg"
+            src="resources/Books/Fantasy/4.jpg"
             alt="Harry Potter Collection"
             class="img-fluid mySlides"
           />
           <img
-            src="resources/Slider/5.jpg"
+            src="resources/Books/Fantasy/5.jpg"
             alt="Harry Potter Collection"
             class="img-fluid mySlides"
           />
           <img
-            src="resources/Slider/6.jpg"
+            src="resources/Books/Fantasy/6.jpg"
             alt="Harry Potter Collection"
             class="img-fluid mySlides"
           />
           <img
-            src="resources/Slider/7.jpg"
+            src="resources/Books/Fantasy/7.jpg"
             alt="Harry Potter Collection"
             class="img-fluid mySlides"
           />
@@ -172,6 +172,41 @@
       </div>
     </div>
     <!-- End slider -->
+
+    <!-- Start products -->
+    <div class="container mt-5">
+      <!-- First Row -->
+      <div class="row">
+        <div class="col">
+          <h2>Browse our selection of books</h2>
+        </div>
+      </div>
+    
+      <!-- Second Row -->
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <input type="text" class="form-control filterSearch" placeholder="Search">
+        </div>
+        <div class="col-md-2">
+          <button type="button" class="btn btn-primary searchBtn">Search</button>
+        </div>
+      </div>
+    
+      <!-- Third Row -->
+      <div class="row mb-3">
+        <div class="col">
+          <button type="button" class="btn btn-secondary filterBtns" onclick="filterBooks('all')">All</button>
+          <button type="button" class="btn btn-secondary filterBtns" onclick="filterBooks('fantasy')">Fantasy</button>
+          <button type="button" class="btn btn-secondary filterBtns" onclick="filterBooks('mystery')">Mystery</button>
+          <button type="button" class="btn btn-secondary filterBtns" onclick="filterBooks('IT')">IT</button>
+          <button type="button" class="btn btn-secondary filterBtns" onclick="filterBooks('science')">Science</button>
+        </div>
+      </div>
+    
+      <!-- Book Display Row -->
+      <div class="row" id="bookContainer"></div>
+    </div>
+    <!-- End products -->
 
     <!-- Start Footer -->
     <div class="footer pt-t pb-5 text-white-50 text-center text-md-start">
@@ -248,5 +283,6 @@
     <script src="scripts/bootstrap.bundle.js"></script>
     <script src="scripts/all.min.js"></script>
     <script src="scripts/slider.js"></script>
+    <script src="scripts/cart.js"></script>
   </body>
 </html>
