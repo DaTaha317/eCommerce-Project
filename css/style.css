@@ -49,6 +49,7 @@ body {
 /* Start Footer */
 .footer {
   background-color: var(--dark-blue);
+  padding-top: 20px;
 }
 
 .footer .copyright > span {
