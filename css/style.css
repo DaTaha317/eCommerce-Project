@@ -97,3 +97,36 @@ body {
   color: green;
 }
 /* End Validation */
+
+/* Start Slider */
+.mySlides {
+  display: none;
+  height: 700px;
+  width: 100%;
+}
+
+.slider-container {
+  position: relative;
+  display: inline-block;
+}
+
+.slider-icon {
+  position: absolute;
+  top: 50%;
+  transform: translate(50%, -50%);
+  cursor: pointer;
+  color: white;
+  background-color: rgb(51, 64, 90);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.slider-icon-right {
+  right: 3%;
+}
+
+.slider-icon-left {
+  right: 97%;
+}
+/* End Slider */
