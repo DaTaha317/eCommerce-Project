@@ -86,5 +86,14 @@ body {
 .libre-img {
   width: 50%;
 }
-
 /* End About Section */
+
+/* Start validation */
+.invalid {
+  color: red;
+}
+
+.valid {
+  color: green;
+}
+/* End Validation */
