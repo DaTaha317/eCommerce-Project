@@ -81,3 +81,10 @@ body {
   background-color: var(--light-blue);
 }
 /* End Footer */
+
+/* Start About section */
+.libre-img {
+  width: 50%;
+}
+
+/* End About Section */
