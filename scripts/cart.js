@@ -1,6 +1,5 @@
 // Initialize an empty cart or retrieve existing cart from session cookie
 var cart = JSON.parse(getSessionCookie("cart")) || { items: [] };
-
 // Function to get the value of a session cookie
 function getSessionCookie(cookieName) {
   var name = cookieName + "=";
@@ -30,6 +29,8 @@ function removeItemFromCart(index) {
 // update cart cookies
 function updateCartCookie() {
   document.cookie = "cart=" + JSON.stringify(cart) + "; path=/";
+  // counter
+  updateCounter();
 }
 
 // Adding product to cookies upon button clicked
@@ -88,7 +89,18 @@ function displayCart() {
   });
 }
 
-displayCart();
+// ###########################################################
+/* when using displayCart() and Refreshing index.html after having added
+anything to the cart seems to be causing an error because
+displayCart is meant to run on cart.html but I couldn't make
+the JS code needed for both pages into seperate files because 
+both html pages need the same functions to access and update 
+cookies so I'm gonna run displayCart() in a try and catch block*/
+// ###########################################################
+
+try {
+  displayCart();
+} catch (error) {}
 
 // removing products from cookies upon button clicked
 var removeBtns = document.querySelectorAll(".removeFromCart");
@@ -98,3 +110,14 @@ removeBtns.forEach((item, index) => {
     location.reload();
   });
 });
+
+// counter
+function updateCounter() {
+  var counter = document.getElementById("counter");
+
+  cart.items.length > 0
+    ? (counter.innerText = cart.items.length)
+    : (counter.innerText = "");
+}
+
+updateCounter();
