@@ -29,7 +29,7 @@ function removeItemFromCart(index) {
 // update cart cookies
 function updateCartCookie() {
   document.cookie = "cart=" + JSON.stringify(cart) + "; path=/";
-  // counter
+  // cart counter
   updateCounter();
 }
 
@@ -111,13 +111,27 @@ removeBtns.forEach((item, index) => {
   });
 });
 
-// counter
+// cart counter
 function updateCounter() {
   var counter = document.getElementById("counter");
 
-  cart.items.length > 0
-    ? (counter.innerText = cart.items.length)
-    : (counter.innerText = "");
+  if (cart.items.length > 0) {
+    counter.innerText = cart.items.length;
+  }
 }
 
 updateCounter();
+
+// sum of products in the cart
+function cartSum() {
+  var sum = 0;
+  cart.items.forEach((item) => {
+    sum += Number(item.price);
+  });
+
+  if (sum > 0) {
+    document.getElementById("sum").innerText = `Total: ${sum}`;
+  }
+}
+
+cartSum();
