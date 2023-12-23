@@ -142,10 +142,27 @@ body {
 
 .card img {
   max-width: 100%;
-  height: auto;
+  height: 250px;
+}
+
+.card button {
+  background-color: var(--dark-blue);
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: var(--light-blue);
+}
+
+.card p {
+  min-height: 50px;
 }
 
 .hide {
   display: none;
 }
+
 /* End Cart Cards */

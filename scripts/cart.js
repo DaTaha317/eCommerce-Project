@@ -3,45 +3,111 @@ var books = {
   data: [
     {
       title: "Harry Potter and the Philosopher's Stone",
-      category: "fantasy",
-      price: "20",
+      category: "Fantasy",
+      price: "25",
       image: "resources/Books/Fantasy/1.jpg",
     },
     {
       title: "Harry Potter and the Chamber of Secrets",
-      category: "fantasy",
-      price: "20",
+      category: "Fantasy",
+      price: "30",
       image: "resources/Books/Fantasy/2.jpg",
     },
     {
       title: "Harry Potter and the Prisoner of Azkaban",
-      category: "fantasy",
-      price: "30",
+      category: "Fantasy",
+      price: "35",
       image: "resources/Books/Fantasy/3.jpg",
     },
     {
       title: "Harry Potter and the Goblet of Fire",
-      category: "fantasy",
+      category: "Fantasy",
       price: "50",
       image: "resources/Books/Fantasy/4.jpg",
     },
     {
       title: " Harry Potter and the Order of the Phoenix",
-      category: "fantasy",
-      price: "50",
+      category: "Fantasy",
+      price: "65",
       image: "resources/Books/Fantasy/5.jpg",
     },
     {
       title: "Harry Potter and the Half-Blood Prince",
-      category: "fantasy",
-      price: "60",
+      category: "Fantasy",
+      price: "55",
       image: "resources/Books/Fantasy/6.jpg",
     },
     {
       title: "Harry Potter and the Deathly Hallows",
-      category: "fantasy",
+      category: "Fantasy",
       price: "70",
       image: "resources/Books/Fantasy/7.jpg",
+    },
+    {
+      title: "Grokking Algorithms",
+      category: "IT",
+      price: "60",
+      image: "resources/Books/IT/grokking.jpg",
+    },
+    {
+      title: "Eloquent Javascript",
+      category: "IT",
+      price: "75",
+      image: "resources/Books/IT/javascript.jpg",
+    },
+    {
+      title: "python programming for beginners",
+      category: "IT",
+      price: "65",
+      image: "resources/Books/IT/python.jpg",
+    },
+    {
+      title: "Murder on the orient express",
+      category: "Mystery",
+      price: "80",
+      image: "resources/Books/Mystery/orient-express.jpg",
+    },
+    {
+      title: "Sherlock Holmes and other stories",
+      category: "Mystery",
+      price: "75",
+      image: "resources/Books/Mystery/sherlock.jpg",
+    },
+    {
+      title: "Physics for beginners",
+      category: "Science",
+      price: "90",
+      image: "resources/Books/Science/physics.jpg",
+    },
+    {
+      title: "Basics of Chemistry",
+      category: "Science",
+      price: "85",
+      image: "resources/Books/Science/chemistry.jpg",
+    },
+    {
+      title: "Conceptual Biology",
+      category: "Science",
+      price: "65",
+      image: "resources/Books/Science/biology.jpg",
+    },
+    {
+      title: "SQL for beginners",
+      category: "IT",
+      price: "50",
+      image: "resources/Books/IT/sql.jpg",
+    },
+    {
+      title: "Machine learning for beginners",
+      category: "IT",
+      price: "100",
+      image: "resources/Books/IT/ML.jpg",
+    },
+    {
+      title: "Code like a pro in C#",
+      category: "IT",
+      price: "75",
+      image: "resources/Books/IT/csharp.jpg",
     },
   ],
 };
@@ -62,7 +128,6 @@ books.data.forEach(function (book) {
 
   var title = document.createElement("p");
   title.textContent = book.title;
-  title.classList.add("book-title");
 
   var price = document.createElement("p");
   price.textContent = "$" + book.price;
@@ -110,7 +175,7 @@ function filterBooks(value) {
   });
 }
 
-// Initially setting all books to active
+// Initially unhides all books
 window.onload = () => {
   filterBooks("all");
 };
