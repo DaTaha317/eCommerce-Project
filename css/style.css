@@ -166,3 +166,17 @@ body {
 }
 
 /* End Cart Cards */
+
+/* Start cart page */
+td img {
+  width: 100px;
+  height: 100px;
+}
+
+td,
+th {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* End cart Page */

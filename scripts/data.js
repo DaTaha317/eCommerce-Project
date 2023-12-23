@@ -134,6 +134,7 @@ books.data.forEach(function (book) {
 
   var addToCartButton = document.createElement("button");
   addToCartButton.textContent = "Add to Cart";
+  addToCartButton.classList.add("addToCart");
 
   // Append the elements to the card
   card.appendChild(title);
