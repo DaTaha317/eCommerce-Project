@@ -19,5 +19,23 @@ function changeSlides(n) {
   showSlides((slideIndex += n));
 }
 
+function autoSlide() {
+  changeSlides(1);
+}
+
 var slideIndex = 1;
 showSlides(slideIndex);
+
+// Automatic sliding
+var slideInterval = setInterval(autoSlide, 4000);
+
+// Pause on hover
+var slidesContainer = document.getElementsByClassName("slider-container")[0];
+slidesContainer.addEventListener("mouseover", function () {
+  clearInterval(slideInterval);
+});
+
+// Resume on hover removal
+slidesContainer.addEventListener("mouseout", function () {
+  slideInterval = setInterval(autoSlide, 4000);
+});
